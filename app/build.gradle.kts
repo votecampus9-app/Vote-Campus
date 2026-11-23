@@ -4,6 +4,7 @@ plugins {
     id("com.google.devtools.ksp") version "2.0.20-1.0.25"
     id("org.jetbrains.kotlin.plugin.serialization") version "1.9.24"
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.google.gms.google.services)
 }
 
 android {
@@ -71,6 +72,8 @@ dependencies {
     implementation("androidx.navigation:navigation-compose:2.8.5")
     implementation("androidx.compose.material:material-icons-extended:1.7.8")
     implementation(libs.core.ktx)
+    implementation(libs.firebase.auth)
+    implementation(libs.firebase.firestore)
 
     // Coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1")
