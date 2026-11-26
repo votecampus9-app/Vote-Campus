@@ -6,6 +6,8 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
+import uk.ac.tees.mad.votecampus.screens.AuthScreen
+import uk.ac.tees.mad.votecampus.screens.SplashScreen
 
 @Composable
 fun NavGraph(navController: NavHostController) {
@@ -14,11 +16,11 @@ fun NavGraph(navController: NavHostController) {
         startDestination = Screen.Splash.route
     ) {
         composable(route = Screen.Splash.route) {
-           // SplashScreen(navController = navController)
+            SplashScreen(navController = navController)
         }
 
         composable(route = Screen.Auth.route) {
-          //  AuthScreen(navController = navController)
+            AuthScreen(navController = navController)
         }
 
         composable(route = Screen.Home.route) {
